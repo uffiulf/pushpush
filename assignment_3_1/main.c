@@ -29,13 +29,13 @@ int comparefunc(const void * a,const void * b){
 
 
 int main() {
-    float num;     //input from user
+    int num;     //input from user
     int array_num[10];
 
     for (int i = 0; i < 10; ++i) {    //repeat 10 times
 
-        printf("Insert your number here: ");
-        scanf("%f", &num);
+        //printf("Insert your number here: ");
+        scanf("%i", &num);
         array_num[i]=num;
 
 
