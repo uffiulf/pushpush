@@ -1,85 +1,65 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #include <stdlib.h>
-#define str_size 100 //Declare the maximum size of the string
 
 
 
 
-
-int main(){
-    //char string1[20];         do not need this come     //
-    int j, length;                  // Code1 for palindrome
-    int flag = 0;                   //
- //--------------------------------------\\
-                Code2 count letter
-
-  char str[str_size];
-  int alp, i;
-  alp = i = 0;
-    
-
-    printf("Enter a string:");
-    //fgets(str, sizeof str, stdin);	//Code 2
-    scanf("%s",str);
-    length = strlen(str);
-
-  /*  for (int k = 0; k <= length ; ++k) {
-        printf("%c\n", str[k]);
+void string_reverse(int count, char string[])
+    {
+        for (int j = 0; j < count; ++j)
+        {
+            printf("%c", string[count - j -1]);
+         }
+        printf("\n");
     }
-*/
-    for(j=0;j < length ;j++){
-        if(str[j] != str[length-j-1]){
-            //printf("j = %c; -j = %c;",str[j], str[length-j-1]);
-            flag = 1;
-            break;
-   }
-}
-
-    if (flag) {
-        printf("%s is not a palindrome", str);
-    }
-    else {
-        printf("%s is a palindrome", str);
-
+bool is_palindrome(int length, char string[])
+    {
+        for (int j = 0; j < length; j++)
+        {
+            if (string[j] != string[length - j - 1])
+            {
+                printf("%s is not a palindrome\n", string);
+                return false;
+            }
+        }
     }
 
 
+int main()
+{
+    char string[20];
+    int count, i;
+   // int string_reverse; // need to have this to pass the test // needs to return nothing || void
 
-    while(str[i]!='\0')
-       {
-           if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
-           {
-               alp++;
-           }
-           i++;
-       }
 
-        printf("\nNumber of Alphabets in the string is : %d\n", alp);
+printf("Enter word: ");
+//scanf("Input string here; %[^\n]s",string);
+scanf("\n\n%[^\n]s", string);       // %[^\n]   is to continue counting letters after space
+    int length = strlen(string);
 
-/*
-    for(j=0;j < length ;j++) {
-        printf("%c", str[length - j - 1]);
-    }
-    printf("\n");
+        while(string[i]!='\0')          // break loop when string is finished
+        {
+            if((string[i]>='a' && string[i]<='z') || (string[i]>='A' && string[i]<='Z'))  // add +1 to i for each letter
+            {
+              count++;
+            }
+          i++;
+        }
 
-*/
-    int k = length - 1;
 
-    for (; k >= 0;) {
-        printf("%c", str[k]);
-        --k;
-    }   */
-    printf("\n");
+    printf("letter count: %i\n",count);
+        printf("%s is a palindrome\n", string);
 
 
 
+string_reverse(length,string);
 
 
 
 
-    return 0;
 
-
+return 0;
 
 }
