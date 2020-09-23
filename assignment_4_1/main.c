@@ -8,11 +8,12 @@
 
 void string_reverse(int count, char string[])
     {
+        printf("The word reversed is '");
         for (int j = 0; j < count; ++j)
         {
             printf("%c", string[count - j -1]);
          }
-        printf("\n");
+        printf("'\n");
     }
 bool is_palindrome(int length, char string[])
     {
@@ -20,41 +21,37 @@ bool is_palindrome(int length, char string[])
         {
             if (string[j] != string[length - j - 1])
             {
-                printf("%s is not a palindrome\n", string);
+                printf("The word is not a palindrome\n");
                 return false;
             }
         }
+        printf("The word is a palindrome\n");
+        return true;
     }
 
 
 int main()
 {
-    char string[20];
+    char string[100] ={0};
     int count, i;
    // int string_reverse; // need to have this to pass the test // needs to return nothing || void
 
 
-printf("Enter word: ");
+    printf("Enter word: ");
 //scanf("Input string here; %[^\n]s",string);
-scanf("\n\n%[^\n]s", string);       // %[^\n]   is to continue counting letters after space
+    fgets(string,100,stdin);
+//scanf("\n\n%[^\n]s", string);       // %[^\n]   is to continue counting letters after space
+    string[strlen(string)-1] = 0;
     int length = strlen(string);
 
-        while(string[i]!='\0')          // break loop when string is finished
-        {
-            if((string[i]>='a' && string[i]<='z') || (string[i]>='A' && string[i]<='Z'))  // add +1 to i for each letter
-            {
-              count++;
-            }
-          i++;
-        }
+    
 
 
-    printf("letter count: %i\n",count);
-        printf("%s is a palindrome\n", string);
+    printf("The word contains %i letters\n",length);
 
+    is_palindrome(length, string);
 
-
-string_reverse(length,string);
+    string_reverse(length,string);
 
 
 
