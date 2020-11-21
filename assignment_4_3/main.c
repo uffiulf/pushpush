@@ -21,8 +21,8 @@ int main()
 
     char * pFirstString, *pSecondString; // declare 2 char pointers
     pFirstString = strstr(str2, str1);   // return pointer to first char that matches string 1 in string 2
-    pSecondString= strstr(str1, str2);  // return pointer to first char that matches string 2 in string 1
-    if(pFirstString || pSecondString)   // if either is a substring og the other then it's a substring
+    pSecondString = strstr(str1, str2);  // return pointer to first char that matches string 2 in string 1
+    if(pFirstString != 0 || pSecondString != 0)   // if either is a substring og the other then it's a substring
         printf("It is a substring!\n"); 
     else
         printf("It is not a substring!\n");
