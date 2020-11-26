@@ -32,7 +32,7 @@ void strsplit(char str[])
     {
         if(i == strlen(str)/2)
         {
-            printf("-");
+            printf(" - ");
         }
         printf("%c", str[i]);
     }
