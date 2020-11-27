@@ -9,10 +9,10 @@ int main()
     char str2[MAX_LIMIT];
     // ask for the first string
     printf("Enter first string: \n");
-    scanf("%s", str1);
+    gets(str1);
     // ask for the second string
     printf("Enter second string here: \n");
-    scanf("%s", str2);
+    gets(str2);
 
     if(!strcmp(str1,str2))    // If the comparison is 0, then the strings are equal
         printf("The strings are equal\n");
