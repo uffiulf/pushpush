@@ -44,7 +44,7 @@ int main()
     string[strlen(string)-1] = 0;
     int length = strlen(string);
 
-    
+
 
 
     printf("The word contains %i letters\n",length);
