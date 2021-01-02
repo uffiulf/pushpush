@@ -5,9 +5,21 @@
 #include <algorithm>
 #include <cctype>
 
-bool alphabetical(const std::string & s);
+
+bool alphabetical(const std::string &s)
+{
+    for(char c : s)
+    {
+    if(!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+            return false;
+    }
+    return true;
+}
+
+
 
 int main() {
+
     std::string name = {0};
     std::string ye ={"yes"};
     char input = {0};
@@ -47,15 +59,8 @@ int main() {
         }
     }
 
- bool alphabetical(const std::string &s)
-       {
-           for(char c : s)
-           {
-               if(!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
-                   return false;
-           }
-           return true;
-       }
+
+
     std::cout <<"Nice to meet you " << name << std::endl;   //remove this when codeline 23-33 works
     sleep(1);
     std::cout <<"What is your gender?\n\n" << std::endl;
@@ -385,7 +390,7 @@ int main() {
 
 
 
-   else if(age>69&&age>99)
+   else if(age>69&&age<99)
    {
        std::cout<<"Wow, fuck your old, I'm impressed you survived this long\n";
        sleep(1);
