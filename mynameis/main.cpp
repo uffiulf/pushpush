@@ -29,21 +29,21 @@ int main() {
     int found;
     //char alpha[80] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";   //add all, upper and lower case letters.
     int flag = {0};
-    int flag2 ={0};
+    int count;
 
 
 
         // ASK OF NAME
     while(flag==0){
-        int count;
+
         std::cout << "Hello there stranger!\n" << "My name is IO-bot, what is your name?\n" <<"....Input your name here: ";
         getline(std::cin, name);
 
         if(alphabetical(name)) {
             flag = 1;
             //break;
-            if (name.find("yes")) {     // This code is executed only if yes start with capital letter??//
-                std::cout << "Yes what?\n";
+            if (name.find('yes'&&"yes")) {     // This code is executed only if yes start with capital letter??//
+                std::cout << "Yes what?\n";     // maybe it is working now? test more
                 sleep(2);
                 std::cout << "\n";
                 std::cout << "Let´s try this again\n" << std::endl;
@@ -60,25 +60,47 @@ int main() {
             sleep(1);
             std::cout<<"Choose a number and I will name you\n\n";
             sleep(1);
-            while(input<'1'||input>'3')
-            {
+            while(input<'1'||input>'3'||flag==0){
                 std::cout<<"[1]Cool name.  [2]Good name.  [3]I shall remain unnamed!\n\n";
                 std::cin>>input;
 
-                if(input=='1')
-            {
-                name="Douche the sweet idiot.";
+                if(input=='1'){
+                name="Douche the sweet idiot";
                 std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                std::cout<<"\n";
                 flag=1;
             }
+                if(input=='2'){
+                    name="Chad the girl";
+                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"\n";
+                    flag =1;
+                }
+                if(input=='3'){
+                    name="Bromo";
+                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"\n";
+                    flag =1;
 
+                }
+                else{
+                    std::cout<<"Really? you never give up do you?"<<std::endl;
+                    sleep(1);
+                    std::cout<<"I will choose for you then....\n\n";
+                    sleep(1);
+                    name="MEGA RETARD";
+                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"\n";
+                    flag=1;
+                    break;
+                }
             }
 
         }
         else
         {
             std::cout << "Very funny...\n " <<std::endl;
-            sleep(2);
+            sleep(1);
             ++count;
             return main();
 
