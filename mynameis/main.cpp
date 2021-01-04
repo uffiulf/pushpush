@@ -33,7 +33,7 @@ int main() {
 
         // ASK OF NAME
     while(flag==0){
-        int count = {0};
+        int count = {0};  //if asked 3 times, then jump to line 56
         //name = {0};
         std::cout << "Hello there stranger!\n" << "My name is IO-bot, what is your name?\n" <<"....Input your name here: ";
         getline(std::cin, name);
