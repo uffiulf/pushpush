@@ -29,33 +29,36 @@ int main() {
     int found;
     //char alpha[80] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";   //add all, upper and lower case letters.
     int flag = {0};
+    int flag2 ={0};
 
+    int count;
 
         // ASK OF NAME
     while(flag==0){
-        int count = {0};  //if asked 3 times, then jump to line 56
+        //int count;  //if asked 3 times, then jump to line 58
         //name = {0};
+
         std::cout << "Hello there stranger!\n" << "My name is IO-bot, what is your name?\n" <<"....Input your name here: ";
         getline(std::cin, name);
 
         if(alphabetical(name)) {
-            flag=1;
+            flag = 1;
             //break;
-            if(name.find("yes"||"Yes"))
-            {
-                std::cout<<"Yes what?\n";
+            if (name.find("yes")) {
+                std::cout << "Yes what?\n";
                 sleep(2);
-                std::cout<<"\n";
-                std::cout<<"Let´s try this again\n"<<std::endl;
+                std::cout << "\n";
+                std::cout << "Let´s try this again\n" << std::endl;
                 sleep(1);
-                ++ count;
+                ++count;
                 return main();
 
             }
-
-        else if(count == 3)
+        }
+// when count is greater than 3 do run this code
+        else if(count>2)
         {
-            std::cout<<"Are you retarded?"<<"Okey then, I will just find a good name for you"<<std::endl;
+            std::cout<<"Are you retarded...? "<<"Okey then, I will just choose a good name for you"<<std::endl;
             sleep(1);
             std::cout<<"Choose a number and I will name you\n\n";
             sleep(1);
@@ -68,6 +71,8 @@ int main() {
             {
                 name="Douche the sweet idiot.";
                 std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                flag=1;
+                flag2=1;
             }
 
             }
@@ -77,7 +82,7 @@ int main() {
         {
             std::cout << "Very funny...\n " <<std::endl;
             sleep(2);
-            ++ count;
+            ++count;
             return main();
 
         }
