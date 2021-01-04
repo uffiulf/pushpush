@@ -56,7 +56,7 @@ int main() {
             }
         }
 // when count is greater than 2 run this code
-        else if(count>2)
+        if(count>2)
         {
             std::cout<<"Are you retarded...? "<<"Okey then, I will just choose a good name for you"<<std::endl;
             sleep(1);
