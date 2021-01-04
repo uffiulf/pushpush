@@ -31,20 +31,18 @@ int main() {
     int flag = {0};
     int flag2 ={0};
 
-    int count;
+
 
         // ASK OF NAME
     while(flag==0){
-        //int count;  //if asked 3 times, then jump to line 58
-        //name = {0};
-
+        int count;
         std::cout << "Hello there stranger!\n" << "My name is IO-bot, what is your name?\n" <<"....Input your name here: ";
         getline(std::cin, name);
 
         if(alphabetical(name)) {
             flag = 1;
             //break;
-            if (name.find("yes")) {
+            if (name.find("yes")) {     // This code is executed only if yes start with capital letter??//
                 std::cout << "Yes what?\n";
                 sleep(2);
                 std::cout << "\n";
@@ -55,7 +53,7 @@ int main() {
 
             }
         }
-// when count is greater than 2 run this code
+// when count is greater than 2 run this code // does not work... //
         if(count>2)
         {
             std::cout<<"Are you retarded...? "<<"Okey then, I will just choose a good name for you"<<std::endl;
@@ -72,7 +70,6 @@ int main() {
                 name="Douche the sweet idiot.";
                 std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
                 flag=1;
-                flag2=1;
             }
 
             }
