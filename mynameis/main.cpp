@@ -41,8 +41,8 @@ int main() {
 
         if(alphabetical(name)) {
             flag = 1;
-            //break;
-            if (name.find('yes'&&"yes")) {     // This code is executed only if yes start with capital letter??//
+        }
+        else if (name.find('yes'&&"yes")) {     // This code is executed only if yes start with capital letter??//
                 std::cout << "Yes what?\n";     // maybe it is working now? test more
                 sleep(2);
                 std::cout << "\n";
@@ -52,9 +52,9 @@ int main() {
                 return main();
 
             }
-        }
+
 // when count is greater than 2 run this code // does not work... //
-        if(count>2)
+        else if(count>2)
         {
             std::cout<<"Are you retarded...? "<<"Okey then, I will just choose a good name for you"<<std::endl;
             sleep(1);
