@@ -109,7 +109,7 @@ int main() {
 
 
 
-    std::cout <<"Nice to meet you " << name << std::endl;   //remove this when codeline 23-33 works
+    std::cout <<"Nice to meet you " << name << std::endl;
     sleep(1);
     std::cout <<"What is your gender?\n\n" << std::endl;
 
