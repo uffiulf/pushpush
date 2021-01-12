@@ -31,6 +31,9 @@ int main() {
     int flag = {0};
     int count;
 
+    std::string a ="yes";
+    std::string a1 ="YES";
+   // size_t found = name.find(str1);
 
 
         // ASK OF NAME
@@ -40,21 +43,25 @@ int main() {
         getline(std::cin, name);
 
         if(alphabetical(name)) {
-            flag = 1;
-        }
-        else if (name.find('yes'&&"yes")) {     // This code is executed only if yes start with capital letter??//
+
+                size_t found = name.find(a);
+            if (found != std::string::npos) {     // This code is executed only if yes start with capital letter??//
                 std::cout << "Yes what?\n";     // maybe it is working now? test more
                 sleep(2);
                 std::cout << "\n";
                 std::cout << "Let´s try this again\n" << std::endl;
+
                 sleep(1);
                 ++count;
                 return main();
-
             }
-
+            else
+            {
+                break;
+            }
+        }
 // when count is greater than 2 run this code // does not work... //
-        else if(count>2)
+    if(count>2)
         {
             std::cout<<"Are you retarded...? "<<"Okey then, I will just choose a good name for you"<<std::endl;
             sleep(1);
@@ -71,7 +78,7 @@ int main() {
                 flag=1;
             }
                 if(input=='2'){
-                    name="Chad the girl";
+                    name="Chad the mad";
                     std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag =1;
@@ -88,7 +95,7 @@ int main() {
                     sleep(1);
                     std::cout<<"I will choose for you then....\n\n";
                     sleep(1);
-                    name="MEGA RETARD";
+                    name="Hardface";
                     std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag=1;
