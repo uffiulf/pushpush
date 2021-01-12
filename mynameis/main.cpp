@@ -4,6 +4,8 @@
 #include "ctime"
 #include <algorithm>
 #include <cctype>
+#include <cstdlib>
+#include <limits>
 
 
 bool alphabetical(const std::string &s)
@@ -25,11 +27,12 @@ int main() {
     int height ={0};
     int weight ={0};
     char answ ={0};
-    char anykey={0};
+    char anykey= 'x';
     int found;
     //char alpha[80] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";   //add all, upper and lower case letters.
     int flag = {0};
     int count;
+    int age30;
 
     std::string a ="yes";
     std::string a1 ="YES";
@@ -45,7 +48,7 @@ int main() {
         if(alphabetical(name)) {
 
                 size_t found = name.find(a);
-            if (found != std::string::npos) {     // This code is executed only if yes start with capital letter??//
+            if (found != std::string::npos || name=="YES" || name=="yES" || name == "yeS" || name == "yEs" || name == "Yes") {     // This code is executed only if yes start with capital letter??//
                 std::cout << "Yes what?\n";     // maybe it is working now? test more
                 sleep(2);
                 std::cout << "\n";
@@ -103,7 +106,7 @@ int main() {
                     sleep(1);
                     std::cout<<"I will choose for you then....\n\n";
                     sleep(1);
-                    name="Hardface";
+                    name="Dofus";
                     std::cout<<"BY THE NORSE GODS OF ASGARD I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag=1;
@@ -123,7 +126,7 @@ int main() {
     }
 
 
-
+    name[0] = toupper(name[0]);
     std::cout <<"Nice to meet you " << name << std::endl;
     sleep(1);
     std::cout <<"What is your gender?\n\n" << std::endl;
@@ -380,7 +383,14 @@ int main() {
 
         }
         if (age > 30 && age <= 69) {
-            std::cout << "Ok good, I really don´t care. Let´s carry on ";
+            std::cout << "Ok good, I really don´t care. Let´s carry on \n\n";
+            std::cout<<"Hit ENTER to continue"<<std::endl;
+
+            std::cin.get(anykey);
+            std::cin.ignore();
+
+
+            goto age30;
 
         } else if (age == 69) {
             std::cout << "Nice";
@@ -478,6 +488,33 @@ int main() {
         // and based on their choices there will be different output.
 
     }
+        age30: {
+        if (age>30 && age <40)
+            std::cout<<"Well well well... Here we are";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".\n\n";
+
+            std::cout<<"Hit ENTER to continue:\n";
+            std::cin.get(anykey);
+            std::cin.ignore();
+
+
+            std::cout<<"So this is what a guy does in his spare time by the age of "<<age<<std::endl;
+            std::cout<<"Hit ENTER to continue:\n";
+            std::cin.get(anykey);
+            std::cin.ignore();
+            std::cout<<"Especially a guy named "<<name<<"\n\n";
+            std::cout<<"Hit ENTER to continue:\n";
+            std::cin.get(anykey);
+            std::cin.ignore();
+    }
+
 
      return 0;
 }
