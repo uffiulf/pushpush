@@ -73,19 +73,27 @@ int main() {
 
                 if(input=='1'){
                 name="Douche the sweet idiot";
-                std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                std::cout<<"BY THE NORSE GODS OF ASGARD I SHALL NAME YOU: "<<name<<std::endl;
                 std::cout<<"\n";
                 flag=1;
+                break;
             }
                 if(input=='2'){
                     name="Chad the mad";
-                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"BY THE NORSE GODS OF ASGARD I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag =1;
+                    break;
                 }
                 if(input=='3'){
                     name="Bromo";
-                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"....";
+                    sleep(1);
+                    std::cout<<"Ok then, it is probably your parents fault why you are like this."<<std::endl;
+                    sleep(1);
+                    std::cout<<"So I will just give you a name and ignore that you where a total retard for a moment.\n";
+                    sleep(1);
+                    std::cout<<"BY THE NORSE GODS OF ASGARD I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag =1;
 
@@ -96,7 +104,7 @@ int main() {
                     std::cout<<"I will choose for you then....\n\n";
                     sleep(1);
                     name="Hardface";
-                    std::cout<<"BY THE NORSE GODS OF WINTER AND GRACE I SHALL NAME YOU: "<<name<<std::endl;
+                    std::cout<<"BY THE NORSE GODS OF ASGARD I SHALL NAME YOU: "<<name<<std::endl;
                     std::cout<<"\n";
                     flag=1;
                     break;
