@@ -8,6 +8,13 @@
 #include <limits>
 
 
+void pressenter() {
+    char anykey= 'x';
+    std::cout << "Hit ENTER to continue:\n";
+    std::cin.get(anykey);
+    std::cin.ignore();
+}
+
 bool alphabetical(const std::string &s)
 {
     for(char c : s)
@@ -128,7 +135,8 @@ int main() {
 
     name[0] = toupper(name[0]);
     std::cout <<"Nice to meet you " << name << std::endl;
-    sleep(1);
+    std::cout<<"\n\n";
+    pressenter();
     std::cout <<"What is your gender?\n\n" << std::endl;
 
     while(input>='1'||input<='6')
@@ -260,9 +268,9 @@ int main() {
             std::cin >> anykey;
 
             return main();
-        } else if (age < 20) {
+        } else if (age < 20 && age > 10) {
             std::cout << "Oh,,, a tiktoker....fml\n";
-            sleep(1);
+            std::cin.ignore();
             std::cout << "Why are you even here?\n\n";
             std::cout << "Oh";
             sleep(1);
@@ -276,7 +284,6 @@ int main() {
 
         } else if (age < 30 && input == '1' && age >= 20) {
             std::cout << "What is your height in cm?\n";
-            sleep(1);
             std::cin >> height;
 
             if (height < 175 && height > 150) {
@@ -285,7 +292,7 @@ int main() {
             }
             if (weight < 60 && weight > 40) {
                 std::cout << "Oh hell yes!" << std::endl;
-                sleep(1);
+                pressenter();
                 answ = {0};
                 while (answ != '1' && answ != '2') {       //why is it jumping over this line??  (after "Oh hell yes!")
 
@@ -382,19 +389,34 @@ int main() {
             }
 
         }
-        if (age > 30 && age <= 69) {
+        if (age > 30 && age < 69) {
             std::cout << "Ok good, I really don´t care. Let´s carry on \n\n";
-            std::cout<<"Hit ENTER to continue"<<std::endl;
+            pressenter();
+            std::cout<<"Well well well... Here we are";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".";
+            sleep(1);
+            std::cout<<".\n\n";
 
-            std::cin.get(anykey);
-            std::cin.ignore();
+            pressenter();
+
+            std::cout<<"So this is what a guy does in his spare time by the age of "<<age<<std::endl;
+            pressenter();
+            std::cout<<"Especially a guy named "<<name<<"\n\n";
+            pressenter();
+        }
 
 
-            goto age30;
 
-        } else if (age == 69) {
-            std::cout << "Nice";
-            sleep(3);
+
+
+        }  if (age == 69) {
+            std::cout << "Nice\n\n";
+            pressenter();
             return main();
         } else if (age > 99) {
             std::cout << "░░░░░░░░███████████████░░░░░░░░\n"
@@ -487,33 +509,8 @@ int main() {
 
         // and based on their choices there will be different output.
 
-    }
-        age30: {
-        if (age>30 && age <40)
-            std::cout<<"Well well well... Here we are";
-            sleep(1);
-            std::cout<<".";
-            sleep(1);
-            std::cout<<".";
-            sleep(1);
-            std::cout<<".";
-            sleep(1);
-            std::cout<<".\n\n";
-
-            std::cout<<"Hit ENTER to continue:\n";
-            std::cin.get(anykey);
-            std::cin.ignore();
 
 
-            std::cout<<"So this is what a guy does in his spare time by the age of "<<age<<std::endl;
-            std::cout<<"Hit ENTER to continue:\n";
-            std::cin.get(anykey);
-            std::cin.ignore();
-            std::cout<<"Especially a guy named "<<name<<"\n\n";
-            std::cout<<"Hit ENTER to continue:\n";
-            std::cin.get(anykey);
-            std::cin.ignore();
-    }
 
 
      return 0;

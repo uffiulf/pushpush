@@ -3,4 +3,4 @@ project(mynameis)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(mynameis main.cpp)
+add_executable(mynameis main.cpp Age30-40.cpp)
